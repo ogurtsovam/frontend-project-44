@@ -7,3 +7,5 @@
 [Watch the game demo on Asciinema](https://asciinema.org/a/ZtaFdek7iJlLpU7n7qCD4AguK)
 
 [Watch the game demo on Asciinema](https://asciinema.org/a/YGC5YdZJMtW2JAIbAoEVhO951)
+
+[Watch the game demo on Asciinema](https://asciinema.org/a/zuo41ssUojkewcPsK9M3D0x7h)
