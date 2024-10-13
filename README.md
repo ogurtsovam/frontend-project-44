@@ -9,3 +9,5 @@
 [Watch the game demo on Asciinema](https://asciinema.org/a/YGC5YdZJMtW2JAIbAoEVhO951)
 
 [Watch the game demo on Asciinema](https://asciinema.org/a/zuo41ssUojkewcPsK9M3D0x7h)
+
+[Watch the game demo on Asciinema](https://asciinema.org/a/B744UrPTWOn5xbfJCiicb5Rew)

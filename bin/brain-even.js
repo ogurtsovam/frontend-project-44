@@ -12,6 +12,7 @@ for (let i = 1; i <= rounds; i += 1) {
     console.log(`Question: ${currentRandomNumber}`);
     const userAnswer = readlineSync.question(`Your answer: `);
     let correctAnswer = getCorrectAnswer(currentRandomNumber);
+    
     let isLastRound = i === rounds;
     if (!proccesAnswers(userAnswer, correctAnswer, isLastRound)) {
         break; 

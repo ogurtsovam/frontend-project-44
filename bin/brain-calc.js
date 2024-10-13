@@ -16,6 +16,7 @@ for (let i = 1; i <= rounds; i += 1) {
     console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
     const userAnswer = parseInt(readlineSync.question('Your answer: '));
     let correctAnswer = getCorrectAnswer(firstNumber, secondNumber, operator);
+    
     let isLastRound = i === rounds;
     if (!proccesAnswers(userAnswer, correctAnswer, isLastRound)) {
         break; 

@@ -14,11 +14,9 @@ for (let i = 1; i <= rounds; i += 1) {
     let difference = getRandomInt(2, 9);
     let progression = getProgression(firstNumber, difference);
     let progressionQuestion = getQuestion(progression);
-
     console.log(`Question: ${progressionQuestion}`);
-
     const userAnswer = parseInt(readlineSync.question('Your answer: '));
-
+    
     let isLastRound = i === rounds;
     if (!proccesAnswers(userAnswer, correctAnswer, isLastRound)) {
         break; 
