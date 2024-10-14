@@ -1,9 +1,14 @@
 function getGreatestCommonDivisor(firstNumber, secondNumber) {
-  while (secondNumber !== 0) {
-    let temp = secondNumber;
-    secondNumber = firstNumber % secondNumber;
-    firstNumber = temp;
+  let a = firstNumber;
+  let b = secondNumber;
+
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
   }
-  return firstNumber;
+
+  return a;
 }
-export { getGreatestCommonDivisor };
+
+export default getGreatestCommonDivisor;
