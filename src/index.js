@@ -11,7 +11,6 @@ function proccesAnswers (userAnswer, correctAnswer, isLastRound) {
     }
     return userAnswer === correctAnswer;
 }
-
 function getRandomInt (from = 1, to = 100) {
     return Math.floor(Math.random() * (to - from + 1)) + from;
 }

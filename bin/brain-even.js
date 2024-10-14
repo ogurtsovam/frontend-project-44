@@ -2,6 +2,7 @@
 import { greetUser } from '../src/cli.js';
 import readlineSync from 'readline-sync';
 import { proccesAnswers, getRandomInt } from '../src/index.js';
+import { getCorrectEvenAnswer } from '../games/even.js';
 
 greetUser();
 console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
@@ -11,7 +12,7 @@ for (let i = 1; i <= rounds; i += 1) {
     let currentRandomNumber = getRandomInt();
     console.log(`Question: ${currentRandomNumber}`);
     const userAnswer = readlineSync.question(`Your answer: `);
-    let correctAnswer = getCorrectAnswer(currentRandomNumber);
+    let correctAnswer = getCorrectEvenAnswer(currentRandomNumber);
     
     let isLastRound = i === rounds;
     if (!proccesAnswers(userAnswer, correctAnswer, isLastRound)) {
@@ -19,11 +20,3 @@ for (let i = 1; i <= rounds; i += 1) {
     }
 }
 
-
-function getCorrectAnswer (number) {
-    if (number % 2 === 0){
-        return "yes";
-    } else {
-        return "no";
-    }
-};

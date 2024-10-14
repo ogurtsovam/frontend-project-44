@@ -2,6 +2,7 @@
 import { greetUser } from '../src/cli.js';
 import readlineSync from 'readline-sync';
 import { proccesAnswers, getRandomInt } from '../src/index.js';
+import { getGreatestCommonDivisor } from '../games/gcd.js';
 
 greetUser();
 console.log('Find the greatest common divisor of given numbers.');
@@ -21,13 +22,4 @@ for (let i = 1; i <= rounds; i += 1) {
     }
 }
 
-// The Euclidean Algorithm
-function getGreatestCommonDivisor(firstNumber, secondNumber) {
-    while (secondNumber !== 0) {
-        let temp = secondNumber;
-        secondNumber = firstNumber % secondNumber;
-        firstNumber = temp;
-    }
-    return firstNumber;
-}
 
