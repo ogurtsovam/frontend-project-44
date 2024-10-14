@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
 import greetUser from '../src/cli.js';
-import { proccesAnswers, getRandomInt } from '../src/index.js';
+import { proccesAnswers, getRandomInt, getUserAnswer } from '../src/index.js';
 import getCorrectEvenAnswer from '../games/even.js';
 
 const userName = greetUser();
@@ -10,7 +9,7 @@ const rounds = 3;
 for (let i = 1; i <= rounds; i += 1) {
   const currentRandomNumber = getRandomInt();
   console.log(`Question: ${currentRandomNumber}`);
-  const userAnswer = readlineSync.question('Your answer: ');
+  const userAnswer = getUserAnswer();
   const correctAnswer = getCorrectEvenAnswer(currentRandomNumber);
   const isLastRound = i === rounds;
   if (!proccesAnswers(userName, userAnswer, correctAnswer, isLastRound)) {

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
 import greetUser from '../src/cli.js';
-import { proccesAnswers, getRandomInt } from '../src/index.js';
+import { proccesAnswers, getRandomInt,getUserAnswerToInt } from '../src/index.js';
 import getGreatestCommonDivisor from '../games/gcd.js';
 
 const userName = greetUser();
@@ -11,7 +10,7 @@ for (let i = 1; i <= rounds; i += 1) {
   const firstNumber = getRandomInt();
   const secondNumber = getRandomInt();
   console.log(`Question: ${firstNumber} ${secondNumber}`);
-  const userAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+  const userAnswer = getUserAnswerToInt();
   const correctAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
   const isLastRound = i === rounds;
   if (!proccesAnswers(userName, userAnswer, correctAnswer, isLastRound)) {

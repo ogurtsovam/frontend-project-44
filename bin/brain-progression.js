@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
 import greetUser from '../src/cli.js';
-import { proccesAnswers, getRandomInt } from '../src/index.js';
+import { proccesAnswers, getRandomInt, getUserAnswerToInt } from '../src/index.js';
 import { getProgression, getProgressionQuestion, getPosition } from '../games/progression.js';
 
 const userName = greetUser();
@@ -14,7 +13,7 @@ for (let i = 1; i <= rounds; i += 1) {
   const position = getPosition(progression);
   const progressionQuestion = getProgressionQuestion(progression, position).join(' ');
   console.log(`Question: ${progressionQuestion}`);
-  const userAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+  const userAnswer = getUserAnswerToInt();
   const correctAnswer = progression[position];
   const isLastRound = i === rounds;
   if (!proccesAnswers(userName, userAnswer, correctAnswer, isLastRound)) {
