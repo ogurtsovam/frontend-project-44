@@ -1,5 +1,4 @@
 import { getRandomInt } from '../src/index.js';
-
 function getProgression (firstNumber, difference) {
     let progression = [];
     let sum = firstNumber;

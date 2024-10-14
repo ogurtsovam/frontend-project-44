@@ -1,5 +1,4 @@
 import { getRandomInt } from '../src/index.js';
-
 const operators = ['+', '-', '*'];
 function generateOperator () {
     return operators[getRandomInt(0, operators.length - 1)];
