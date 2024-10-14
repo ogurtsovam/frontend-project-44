@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 import { greetUser } from '../src/cli.js';
 import { proccesAnswers, getRandomInt } from '../src/index.js';
-import { getCorrectPrimeAnswer } from '../games/prime.js';
+import getCorrectPrimeAnswer from '../games/prime.js';
 
 greetUser();
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');

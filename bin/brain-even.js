@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 import { greetUser } from '../src/cli.js';
 import { proccesAnswers, getRandomInt } from '../src/index.js';
-import { getCorrectEvenAnswer } from '../games/even.js';
+import getCorrectEvenAnswer from '../games/even.js';
 
 greetUser();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
