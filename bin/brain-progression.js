@@ -14,7 +14,7 @@ for (let i = 1; i <= rounds; i += 1) {
     let firstNumber = getRandomInt(1, 10);
     let difference = getRandomInt(2, 9);
     let progression = getProgression(firstNumber, difference);
-    let progressionQuestion = getProgressionQuestion(progression);
+    let progressionQuestion = getProgressionQuestion(progression).join(" ");
     console.log(`Question: ${progressionQuestion}`);
     const userAnswer = parseInt(readlineSync.question('Your answer: '));
 
