@@ -4,7 +4,7 @@ import { greetUser } from '../src/cli.js';
 import { proccesAnswers, getRandomInt } from '../src/index.js';
 import getGreatestCommonDivisor from '../games/gcd.js';
 
-greetUser();
+const userName = greetUser();
 console.log('Find the greatest common divisor of given numbers.');
 const rounds = 3;
 for (let i = 1; i <= rounds; i += 1) {
@@ -14,7 +14,7 @@ for (let i = 1; i <= rounds; i += 1) {
   const userAnswer = parseInt(readlineSync.question('Your answer: '), 10);
   const correctAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
   const isLastRound = i === rounds;
-  if (!proccesAnswers(userAnswer, correctAnswer, isLastRound)) {
+  if (!proccesAnswers(userName, userAnswer, correctAnswer, isLastRound)) {
     break;
   }
 }

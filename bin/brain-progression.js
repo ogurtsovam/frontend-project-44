@@ -4,7 +4,7 @@ import { greetUser } from '../src/cli.js';
 import { proccesAnswers, getRandomInt } from '../src/index.js';
 import { getProgression, getProgressionQuestion, getPosition } from '../games/progression.js';
 
-greetUser();
+const userName = greetUser();
 console.log('What number is missing in the progression?');
 const rounds = 3;
 for (let i = 1; i <= rounds; i += 1) {
@@ -17,7 +17,7 @@ for (let i = 1; i <= rounds; i += 1) {
   const userAnswer = parseInt(readlineSync.question('Your answer: '), 10);
   const correctAnswer = progression[position];
   const isLastRound = i === rounds;
-  if (!proccesAnswers(userAnswer, correctAnswer, isLastRound)) {
+  if (!proccesAnswers(userName, userAnswer, correctAnswer, isLastRound)) {
     break;
   }
 }
