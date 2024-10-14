@@ -4,7 +4,7 @@ function getCorrectPrimeAnswer(firstNumber) {
     31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
     73, 79, 83, 89, 97,
   ];
-  
+
   if (primeNumbers.includes(firstNumber)) {
     return 'yes';
   }
