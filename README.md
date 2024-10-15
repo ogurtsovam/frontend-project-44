@@ -23,3 +23,13 @@ This game tests the user's ability to identify a missing number in a sequence of
 This game challenges the user to determine if randomly generated numbers are prime or not.
 
 [Watch the game demo on Asciinema](https://asciinema.org/a/B744UrPTWOn5xbfJCiicb5Rew)
+
+To download and run this game, you’ll need to follow these steps. This explanation assumes that you have Node.js installed on your computer, as it's required to run JavaScript-based projects. Here’s the full guide:
+
+1) Clone the Repository: git clone git@github.com:ogurtsovam/frontend-project-44.git
+
+2) Navigate to the Project Directory and Install Dependencies, in command line you need to write: make install
+
+3) Write the name of the game you'd like to play in command line to start the game! 
+
+brain-calc, brain-even, brain-gcd, brain-prime, brain-progression
