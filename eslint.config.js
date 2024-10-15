@@ -15,6 +15,7 @@ export default [
       'comma-dangle': ['error', 'always-multiline'],
       'quote-props': ['error', 'as-needed'],
       'no-extra-semi': 'error',
+      'no-multi-spaces': 'error',
       indent: ['error', 2],
       'comma-spacing': ['error', {
         before: false,

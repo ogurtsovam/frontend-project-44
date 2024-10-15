@@ -1,6 +1,6 @@
 import greetUser from '../src/cli.js';
 
-function runGame(description, questionSetuper, userAnswerGetter,  rounds = 3) {
+function runGame(description, questionSetuper, userAnswerGetter, rounds = 3) {
   const userName = greetUser();
   console.log(description);
   for (let i = 1; i <= rounds; i += 1) {
