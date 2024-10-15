@@ -1,5 +1,5 @@
 import {
- getRandomInt,
+  getRandomInt,
 } from '../src/index.js';
 
 function getProgression(firstNumber, step) {
@@ -21,5 +21,5 @@ function getProgressionQuestion(progression, position) {
 }
 
 export {
- getProgression, getProgressionQuestion, getPosition,
+  getProgression, getProgressionQuestion, getPosition,
 };

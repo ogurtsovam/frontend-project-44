@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
- getRandomInt, getUserAnswerToInt,
+  getRandomInt, getUserAnswerToInt,
 } from '../src/index.js';
 import getGreatestCommonDivisor from '../games/gcd.js';
 import runGame from '../games/abstract_game.js';

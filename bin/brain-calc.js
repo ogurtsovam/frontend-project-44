@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import {
- getRandomInt, getUserAnswerToInt,
+  getRandomInt, getUserAnswerToInt,
 } from '../src/index.js';
 import {
- generateOperator, getCorrectCalcAnswer,
+  generateOperator, getCorrectCalcAnswer,
 } from '../games/calc.js';
 import runGame from '../games/abstract_game.js';
 

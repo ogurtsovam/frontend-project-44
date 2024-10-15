@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
- getRandomInt, getUserAnswer,
+  getRandomInt, getUserAnswer,
 } from '../src/index.js';
 import getCorrectPrimeAnswer from '../games/prime.js';
 import runGame from '../games/abstract_game.js';

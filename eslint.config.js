@@ -15,26 +15,33 @@ export default [
       'comma-dangle': ['error', 'always-multiline'],
       'quote-props': ['error', 'as-needed'],
       'no-extra-semi': 'error',
+      indent: ['error', 2],
       'comma-spacing': ['error', {
- before: false, after: true,
-}],
+        before: false,
+        after: true,
+      }],
       'keyword-spacing': ['error', {
- before: true, after: true,
-}],
+        before: true,
+        after: true,
+      }],
       'object-curly-newline': ['error', {
-      ObjectExpression: {
- multiline: true, minProperties: 1,
-},
-      ObjectPattern: {
- multiline: true, minProperties: 1,
-},
-      ImportDeclaration: {
- multiline: true, minProperties: 1,
-},
-      ExportDeclaration: {
- multiline: true, minProperties: 1,
-},
-    }],
+        ObjectExpression: {
+          multiline: true,
+          minProperties: 1,
+        },
+        ObjectPattern: {
+          multiline: true,
+          minProperties: 1,
+        },
+        ImportDeclaration: {
+          multiline: true,
+          minProperties: 1,
+        },
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 1,
+        },
+      }],
     },
   },
 ];

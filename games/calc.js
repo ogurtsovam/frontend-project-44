@@ -1,5 +1,5 @@
 import {
- getRandomInt,
+  getRandomInt,
 } from '../src/index.js';
 
 const operators = ['+', '-', '*'];
@@ -21,5 +21,5 @@ function getCorrectCalcAnswer(firstNumber, secondNumber, operator) {
 }
 
 export {
- generateOperator, getCorrectCalcAnswer,
+  generateOperator, getCorrectCalcAnswer,
 };

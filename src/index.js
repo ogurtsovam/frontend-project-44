@@ -13,5 +13,5 @@ function getUserAnswerToInt() {
 }
 
 export {
-   getRandomInt, getUserAnswer, getUserAnswerToInt,
+  getRandomInt, getUserAnswer, getUserAnswerToInt,
 };
