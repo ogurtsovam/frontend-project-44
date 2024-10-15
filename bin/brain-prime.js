@@ -1,18 +1,14 @@
 #!/usr/bin/env node
-import greetUser from '../src/cli.js';
-import { proccesAnswers, getRandomInt, getUserAnswer } from '../src/index.js';
+import {
+ getRandomInt, getUserAnswer,
+} from '../src/index.js';
 import getCorrectPrimeAnswer from '../games/prime.js';
+import runGame from '../games/abstract_game.js';
 
-const userName = greetUser();
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-const rounds = 3;
-for (let i = 1; i <= rounds; i += 1) {
+function setupQuestion() {
   const firstNumber = getRandomInt();
   console.log(`Question: ${firstNumber}`);
-  const userAnswer = getUserAnswer();
-  const correctAnswer = getCorrectPrimeAnswer(firstNumber);
-  const isLastRound = i === rounds;
-  if (!proccesAnswers(userName, userAnswer, correctAnswer, isLastRound)) {
-    break;
-  }
+  return getCorrectPrimeAnswer(firstNumber);
 }
+
+runGame('Answer "yes" if given number is prime. Otherwise answer "no".', setupQuestion, getUserAnswer);

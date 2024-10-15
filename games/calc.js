@@ -1,4 +1,6 @@
-import { getRandomInt } from '../src/index.js';
+import {
+ getRandomInt,
+} from '../src/index.js';
 
 const operators = ['+', '-', '*'];
 function generateOperator() {
@@ -18,4 +20,6 @@ function getCorrectCalcAnswer(firstNumber, secondNumber, operator) {
   return null;
 }
 
-export { generateOperator, getCorrectCalcAnswer };
+export {
+ generateOperator, getCorrectCalcAnswer,
+};

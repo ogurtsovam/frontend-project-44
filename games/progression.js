@@ -1,4 +1,6 @@
-import { getRandomInt } from '../src/index.js';
+import {
+ getRandomInt,
+} from '../src/index.js';
 
 function getProgression(firstNumber, step) {
   const progression = [];
@@ -18,4 +20,6 @@ function getProgressionQuestion(progression, position) {
   return progression.map((num) => (num === progression[position] ? '..' : num));
 }
 
-export { getProgression, getProgressionQuestion, getPosition };
+export {
+ getProgression, getProgressionQuestion, getPosition,
+};
