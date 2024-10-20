@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-function getRandomInt(from = 1, to = 100) {
+function getRandomNumber(from, to) {
   return Math.floor(Math.random() * (to - from + 1)) + from;
 }
 
@@ -13,5 +13,5 @@ function getUserAnswerToInt() {
 }
 
 export {
-  getRandomInt, getUserAnswer, getUserAnswerToInt,
+  getRandomNumber, getUserAnswer, getUserAnswerToInt,
 };

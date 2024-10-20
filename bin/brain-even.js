@@ -1,14 +1,10 @@
 #!/usr/bin/env node
+import runGame from '../src/games/runGame.js';
 import {
-  getRandomInt, getUserAnswer,
+  getUserAnswer,
 } from '../src/index.js';
-import getCorrectEvenAnswer from '../games/even.js';
-import runGame from '../games/abstract_game.js';
-
-function setupQuestion() {
-  const currentRandomNumber = getRandomInt();
-  console.log(`Question: ${currentRandomNumber}`);
-  return getCorrectEvenAnswer(currentRandomNumber);
-}
+import {
+  setupQuestion,
+} from '../src/games/even.js';
 
 runGame('Answer "yes" if the number is even, otherwise answer "no".', setupQuestion, getUserAnswer);
