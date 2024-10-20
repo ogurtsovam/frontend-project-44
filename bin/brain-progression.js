@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import runGame from '../src/games/runGame.js';
 import {
-  getUserAnswerToInt,
+    getUserAnswerToInt,
 } from '../src/index.js';
 import {
-  setupQuestion,
+    setupQuestion,
 } from '../src/games/progression.js';
 
 runGame('What number is missing in the progression?', setupQuestion, getUserAnswerToInt);
