@@ -7,7 +7,7 @@ function runGame(description, questionSetuper, roundsCount = 3) {
   console.log(description);
   for (let i = 1; i <= roundsCount; i += 1) {
     const correctAnswer = questionSetuper();
-    let userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
