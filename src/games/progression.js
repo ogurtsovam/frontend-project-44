@@ -1,11 +1,10 @@
-import {
-  getRandomNumber,
-} from '../index.js';
+import calculateRandomNumber from '../utils.js';
+import runGame from '../runGame.js';
 
-function getProgression(firstNumber, step) {
+function getProgression(number1, step) {
   const progression = [];
-  let currentNumber = firstNumber;
-  for (let i = 0; i <= getRandomNumber(5, 11); i += 1) {
+  let currentNumber = number1;
+  for (let i = 0; i <= calculateRandomNumber(5, 11); i += 1) {
     progression.push(currentNumber);
     currentNumber += step;
   }
@@ -13,7 +12,7 @@ function getProgression(firstNumber, step) {
 }
 
 function getPosition(progression) {
-  return getRandomNumber(0, progression.length - 1);
+  return calculateRandomNumber(0, progression.length - 1);
 }
 
 function getProgressionQuestion(progression, position) {
@@ -21,15 +20,17 @@ function getProgressionQuestion(progression, position) {
 }
 
 function setupQuestion() {
-  const number1 = getRandomNumber(1, 10);
-  const step = getRandomNumber(2, 9);
+  const number1 = calculateRandomNumber(1, 10);
+  const step = calculateRandomNumber(2, 9);
   const progression = getProgression(number1, step);
   const position = getPosition(progression);
   const progressionQuestion = getProgressionQuestion(progression, position).join(' ');
   console.log(`Question: ${progressionQuestion}`);
-  return progression[position];
+  return progression[position].toString();
 }
 
-export {
-  getProgression, getProgressionQuestion, getPosition, setupQuestion,
-};
+function runProgressionGame() {
+  runGame('What number is missing in the progression?', setupQuestion);
+}
+
+export default runProgressionGame;

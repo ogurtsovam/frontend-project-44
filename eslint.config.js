@@ -17,7 +17,9 @@ export default [
       'no-extra-semi': 'error',
       'semi-style': ['error', 'last'],
       'no-multi-spaces': 'error',
-      indent: ['error', 2],
+      indent: ['error', 2, {
+        SwitchCase: 1,
+      }],
       'comma-spacing': ['error', {
         before: false,
         after: true,

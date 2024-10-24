@@ -1,33 +1,34 @@
-import {
-  getRandomNumber,
-} from '../index.js';
+import calculateRandomNumber from '../utils.js';
+import runGame from '../runGame.js';
 
 const operators = ['+', '-', '*'];
 function generateOperator() {
-  return operators[getRandomNumber(0, operators.length - 1)];
+  return operators[calculateRandomNumber(0, operators.length - 1)];
 }
 
-function getCorrectCalcAnswer(firstNumber, secondNumber, operator) {
+function getCorrectCalcAnswer(number1, number2, operator) {
   switch (operator) {
     case '+':
-      return firstNumber + secondNumber;
+      return number1 + number2;
     case '-':
-      return firstNumber - secondNumber;
+      return number1 - number2;
     case '*':
-      return firstNumber * secondNumber;
+      return number1 * number2;
     default:
-      return null;
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
 }
 
 function setupQuestion() {
-  const number1 = getRandomNumber(0, 10);
-  const number2 = getRandomNumber(0, 10);
+  const number1 = calculateRandomNumber(0, 10);
+  const number2 = calculateRandomNumber(0, 10);
   const operator = generateOperator();
   console.log(`Question: ${number1} ${operator} ${number2}`);
-  return getCorrectCalcAnswer(number1, number2, operator);
+  return getCorrectCalcAnswer(number1, number2, operator).toString();
 }
 
-export {
-  generateOperator, getCorrectCalcAnswer, setupQuestion,
-};
+function runCalcGame() {
+  runGame('What is the result of the expression?', setupQuestion);
+}
+
+export default runCalcGame;

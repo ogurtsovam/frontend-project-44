@@ -1,10 +1,9 @@
-import {
-  getRandomNumber,
-} from '../index.js';
+import calculateRandomNumber from '../utils.js';
+import runGame from '../runGame.js';
 
-function getGreatestCommonDivisor(firstNumber, secondNumber) {
-  let a = firstNumber;
-  let b = secondNumber;
+function getGreatestCommonDivisor(number1, number2) {
+  let a = number1;
+  let b = number2;
 
   while (b !== 0) {
     const temp = b;
@@ -16,12 +15,14 @@ function getGreatestCommonDivisor(firstNumber, secondNumber) {
 }
 
 function setupQuestion() {
-  const number1 = getRandomNumber(0, 100);
-  const number2 = getRandomNumber(0, 100);
+  const number1 = calculateRandomNumber(0, 100);
+  const number2 = calculateRandomNumber(0, 100);
   console.log(`Question: ${number1} ${number2}`);
-  return getGreatestCommonDivisor(number1, number2);
+  return getGreatestCommonDivisor(number1, number2).toString();
 }
 
-export {
-  getGreatestCommonDivisor, setupQuestion,
-};
+function runGcdGame() {
+  runGame('Find the greatest common divisor of given numbers.', setupQuestion);
+}
+
+export default runGcdGame;

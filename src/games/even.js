@@ -1,20 +1,21 @@
-import {
-  getRandomNumber,
-} from '../index.js';
+import calculateRandomNumber from '../utils.js';
+import runGame from '../runGame.js';
 
-function getCorrectEvenAnswer(number) {
+function isEvenAnswer(number) {
   if (number % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 }
 
 function setupQuestion() {
-  const currentRandomNumber = getRandomNumber(0, 100);
+  const currentRandomNumber = calculateRandomNumber(0, 100);
   console.log(`Question: ${currentRandomNumber}`);
-  return getCorrectEvenAnswer(currentRandomNumber);
+  return isEvenAnswer(currentRandomNumber) ? 'yes' : 'no';
 }
 
-export {
-  getCorrectEvenAnswer, setupQuestion,
-};
+function runEvenGame() {
+  runGame('Answer "yes" if the number is even, otherwise answer "no".', setupQuestion);
+}
+
+export default runEvenGame;

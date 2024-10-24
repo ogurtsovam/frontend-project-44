@@ -1,6 +1,5 @@
-import {
-  getRandomNumber,
-} from '../index.js';
+import calculateRandomNumber from '../utils.js';
+import runGame from '../runGame.js';
 
 function isPrime(number1) {
   if (number1 < 2) {
@@ -15,11 +14,13 @@ function isPrime(number1) {
 }
 
 function setupQuestion() {
-  const number1 = getRandomNumber(0, 100);
+  const number1 = calculateRandomNumber(1, 100);
   console.log(`Question: ${number1}`);
   return isPrime(number1) ? 'yes' : 'no';
 }
 
-export {
-  isPrime, setupQuestion,
-};
+function runPrimeGame() {
+  runGame('Answer "yes" if given number is prime. Otherwise answer "no".', setupQuestion);
+}
+
+export default runPrimeGame;
