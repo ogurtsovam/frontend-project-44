@@ -18,8 +18,8 @@ function setupQuestion() {
   const question = `${number1}`;
   return {
     correctAnswer: isPrime(number1) ? 'yes' : 'no',
-    question: question,
-  }
+    question,
+  };
 }
 
 function runPrimeGame() {

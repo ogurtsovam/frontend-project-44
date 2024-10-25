@@ -16,6 +16,8 @@ export default [
       'quote-props': ['error', 'as-needed'],
       'no-extra-semi': 'error',
       'semi-style': ['error', 'last'],
+      semi: ['error', 'always'],
+      'object-shorthand': ['error', 'always'],
       'no-multi-spaces': 'error',
       indent: ['error', 2, {
         SwitchCase: 1,

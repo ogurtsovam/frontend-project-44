@@ -26,8 +26,8 @@ function setupQuestion() {
   const question = `${number1} ${operator} ${number2}`;
   return {
     correctAnswer: getCorrectCalcAnswer(number1, number2, operator).toString(),
-    question: question,
-  }
+    question,
+  };
 }
 
 function runCalcGame() {

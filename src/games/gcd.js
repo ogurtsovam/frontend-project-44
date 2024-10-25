@@ -20,8 +20,8 @@ function setupQuestion() {
   const question = `${number1} ${number2}`;
   return {
     correctAnswer: getGreatestCommonDivisor(number1, number2).toString(),
-    question: question,
-  }
+    question,
+  };
 }
 
 function runGcdGame() {

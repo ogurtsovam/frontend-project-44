@@ -28,8 +28,8 @@ function setupQuestion() {
   const question = `${progressionQuestion}`;
   return {
     correctAnswer: progression[position].toString(),
-    question: question,
-  }
+    question,
+  };
 }
 
 

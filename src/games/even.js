@@ -13,8 +13,8 @@ function setupQuestion() {
   const question = `${currentRandomNumber}`;
   return {
     correctAnswer: isEvenAnswer(currentRandomNumber) ? 'yes' : 'no',
-    question: question,
-  }
+    question,
+  };
 }
 
 function runEvenGame() {
