@@ -32,8 +32,6 @@ function setupQuestion() {
   };
 }
 
-
-
 function runProgressionGame() {
   runGame('What number is missing in the progression?', setupQuestion);
 }
