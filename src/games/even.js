@@ -10,8 +10,8 @@ function isEvenAnswer(number) {
 
 function setupQuestion() {
   const currentRandomNumber = calculateRandomNumber(0, 100);
-  console.log(`Question: ${currentRandomNumber}`);
-  return isEvenAnswer(currentRandomNumber) ? 'yes' : 'no';
+  const question =`${currentRandomNumber}`;
+  return [isEvenAnswer(currentRandomNumber) ? 'yes' : 'no', question];
 }
 
 function runEvenGame() {

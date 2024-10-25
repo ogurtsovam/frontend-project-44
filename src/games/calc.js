@@ -23,8 +23,8 @@ function setupQuestion() {
   const number1 = calculateRandomNumber(0, 10);
   const number2 = calculateRandomNumber(0, 10);
   const operator = generateOperator();
-  console.log(`Question: ${number1} ${operator} ${number2}`);
-  return getCorrectCalcAnswer(number1, number2, operator).toString();
+  const question = `${number1} ${operator} ${number2}`;
+  return [getCorrectCalcAnswer(number1, number2, operator).toString(), question];
 }
 
 function runCalcGame() {
