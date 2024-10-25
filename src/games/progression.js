@@ -25,7 +25,7 @@ function setupQuestion() {
   const progression = getProgression(number1, step);
   const position = getPosition(progression);
   const progressionQuestion = getProgressionQuestion(progression, position).join(' ');
-  const question =`${progressionQuestion}`;
+  const question = `${progressionQuestion}`;
   return [progression[position].toString(), question];
 }
 

@@ -15,7 +15,7 @@ function isPrime(number1) {
 
 function setupQuestion() {
   const number1 = calculateRandomNumber(1, 100);
-  const question =`${number1}`;
+  const question = `${number1}`;
   return [isPrime(number1) ? 'yes' : 'no', question];
 }
 

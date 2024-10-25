@@ -10,7 +10,7 @@ function isEvenAnswer(number) {
 
 function setupQuestion() {
   const currentRandomNumber = calculateRandomNumber(0, 100);
-  const question =`${currentRandomNumber}`;
+  const question = `${currentRandomNumber}`;
   return [isEvenAnswer(currentRandomNumber) ? 'yes' : 'no', question];
 }
 
