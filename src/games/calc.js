@@ -24,7 +24,10 @@ function setupQuestion() {
   const number2 = calculateRandomNumber(0, 10);
   const operator = generateOperator();
   const question = `${number1} ${operator} ${number2}`;
-  return [getCorrectCalcAnswer(number1, number2, operator).toString(), question];
+  return {
+    correctAnswer: getCorrectCalcAnswer(number1, number2, operator).toString(),
+    question: question,
+  }
 }
 
 function runCalcGame() {

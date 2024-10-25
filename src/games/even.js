@@ -11,7 +11,10 @@ function isEvenAnswer(number) {
 function setupQuestion() {
   const currentRandomNumber = calculateRandomNumber(0, 100);
   const question = `${currentRandomNumber}`;
-  return [isEvenAnswer(currentRandomNumber) ? 'yes' : 'no', question];
+  return {
+    correctAnswer: isEvenAnswer(currentRandomNumber) ? 'yes' : 'no',
+    question: question,
+  }
 }
 
 function runEvenGame() {

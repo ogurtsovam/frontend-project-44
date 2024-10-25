@@ -6,7 +6,9 @@ function runGame(description, questionSetuper, roundsCount = 3) {
   console.log(`Hello, ${userName}!`);
   console.log(description);
   for (let i = 1; i <= roundsCount; i += 1) {
-    const [correctAnswer, question] = questionSetuper();
+    const {
+      correctAnswer, question,
+    } = questionSetuper();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {

@@ -18,7 +18,10 @@ function setupQuestion() {
   const number1 = calculateRandomNumber(0, 100);
   const number2 = calculateRandomNumber(0, 100);
   const question = `${number1} ${number2}`;
-  return [getGreatestCommonDivisor(number1, number2).toString(), question];
+  return {
+    correctAnswer: getGreatestCommonDivisor(number1, number2).toString(),
+    question: question,
+  }
 }
 
 function runGcdGame() {

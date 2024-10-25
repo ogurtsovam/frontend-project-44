@@ -26,8 +26,13 @@ function setupQuestion() {
   const position = getPosition(progression);
   const progressionQuestion = getProgressionQuestion(progression, position).join(' ');
   const question = `${progressionQuestion}`;
-  return [progression[position].toString(), question];
+  return {
+    correctAnswer: progression[position].toString(),
+    question: question,
+  }
 }
+
+
 
 function runProgressionGame() {
   runGame('What number is missing in the progression?', setupQuestion);
